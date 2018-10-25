@@ -1,0 +1,38 @@
+<doctype <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <script>
+
+            $.get("data/tweets.json", function (data) {
+                console.log(data);
+            });
+            console.log("Test");
+
+            var array = ["Apple", "Banana", "Orange"]
+
+            function callback(val) {
+                console.log(val);
+            }
+            array.forEach(callback);
+
+            function* gen() {
+                var x = yield 10;
+            }
+            var myGen = gen();
+            console.log(myGen.next());
+
+        </script>
+    </body>
+
+    </html>
